@@ -27,6 +27,9 @@
       integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
       crossorigin="anonymous"
     />
+    <!-- Import Vue 3 -->
+    <!-- <script src="https://unpkg.com/browse/vue@3.0.0-beta.24/dist/vue.global.js"></script> -->
+    <script src="https://unpkg.com/vue@3.0.0-beta.24/dist/vue.global.js"></script>
     <title>Hungry Restaurant</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -71,6 +74,47 @@
               </li>
             </ul>
           </div>
+        </nav>
+      </div>
+      <!-- Mobile Navigation -->
+      <div id="mobile-nav">        
+        <nav class="mobile-nav" :class='{open: mobNavOpen}' >
+         
+          <div class="mob-logo">
+            <a href="index.html">
+              <img src="./assets/images/logo.png" alt="">
+            </a>
+          </div>
+          <div class="hamburger-menu" @click='mobNavOpen = !mobNavOpen'>
+            <span class="bar"></span>
+          </div>
+          <ul class="mob-nav-list">
+            <li class="mob-nav-item">
+              <a href="index.html" class="mob-nav-link" @click='mobNavOpen = false'>Home</a>
+            </li>
+            <li class="mob-nav-item">
+              <a href="#about" class="mob-nav-link" @click='mobNavOpen = false'>About</a>
+            </li>
+            <li class="mob-nav-item">
+              <a href="#team" class="mob-nav-link" @click='mobNavOpen = false'>Team</a>
+            </li>
+            <li class="mob-nav-item">
+              <a href="#booking" class="mob-nav-link" @click='mobNavOpen = false'>Booking</a>
+            </li>
+         
+            <li class="mob-nav-item">
+              <a href="#menu" class="mob-nav-link" @click='mobNavOpen = false'>Menu</a>
+            </li>
+            <li class="mob-nav-item">
+              <a href="#gallery" class="mob-nav-link" @click='mobNavOpen = false'>Galerie</a>
+            </li>
+            <li class="mob-nav-item">
+              <a href="#events" class="mob-nav-link" @click='mobNavOpen = false'>Events</a>
+            </li>
+            <li class="mob-nav-item">
+              <a href="#contact" class="mob-nav-link" @click='mobNavOpen = false'>Contact</a>
+            </li>
+          </ul>
         </nav>
       </div>
     </header>
@@ -1640,8 +1684,10 @@
     </main>
 
   <footer class="footer">
+    
   <p> &copy; Copyright | Designed by <span>Mindblister</span> <span class="break"></span> | Developed by <span>Vuchke</span> 2020</p>
   </footer>
+
 
     <script 
       type="text/javascript"
@@ -1667,5 +1713,8 @@
 
     <script  src="./slider.js"></script>
     <script  src="./app.js"></script>
+    <!--Create Vue App -->
+    <script src="./appVue.js"></script>
+    
   </body>
 </html>

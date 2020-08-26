@@ -1,3 +1,12 @@
+
+
+
+
+
+
+
+
+
 //Food Menu Tabs
 
 // Get the element with id="defaultOpen" and click on it making it open
