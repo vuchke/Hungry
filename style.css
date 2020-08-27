@@ -475,18 +475,27 @@ img {
   color: #fff;
 }
 .tabcontent {
-  display: none;
+  /* display: none; */
   -webkit-animation: fadeEffect 0.7s ease-in-out;
   animation: fadeEffect 0.7s ease-in-out;
 }
+
+.menu-item {
+  width: 30%;
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
+.menu-image-container img {
+  border-radius: 20px;
+  transition: all 0.5s;
+}
+/* .menu-item:hover .menu-image-container img{
+  border-radius: 50% 0 50% 0 ;
+} */
 .menu-item-container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-}
-.menu-item {
-  width: 30%;
-  height: 80px;
 }
 .item-content {
   display: flex;
@@ -495,16 +504,19 @@ img {
   line-height: 1.8rem;
   color: #333;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 .item-description {
   font-size: 1.2rem;
   color: rgba(51, 51, 51, 0.5);
+  
 }
 
 /* Private Event Section */
 .events {
   background: url("./assets/images/specialties-bg.png") center no-repeat;
   background-size: cover;
+  overflow-x: hidden;
 }
 .events .section-info,
 .events .reservation-info {
@@ -968,9 +980,7 @@ img {
   .menu-item {
     width: 100%;
   }
-  .events {
-    overflow-x: hidden;
-  }
+  
   .contact-info {
     flex-wrap: wrap;
   }
