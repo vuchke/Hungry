@@ -878,6 +878,7 @@ img {
 
 @media screen and (max-width: 650px) {
   body {
+    width: 100vw
     overflow-x: hidden;
   }
   .about,
@@ -948,6 +949,7 @@ img {
 @media screen and (max-width: 470px) {
   body {
     overflow-x: hidden;
+    width: 100vw;
   }
   .container {
     padding: 0 1rem;
