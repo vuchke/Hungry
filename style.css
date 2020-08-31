@@ -884,6 +884,9 @@ img {
     width: 100vw;
     overflow-x: hidden !important;
   }
+  .hero{
+    overflow: hidden;
+  }
   .about,
   .team,
   .booking,
