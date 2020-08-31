@@ -879,7 +879,7 @@ img {
 @media screen and (max-width: 650px) {
   body {
     width: 100vw;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
   }
   .about,
   .team,
@@ -948,7 +948,7 @@ img {
 
 @media screen and (max-width: 470px) {
   body {
-    overflow-x: hidden;
+    overflow-x: hidden !important;
     width: 100vw;
   }
   .container {
