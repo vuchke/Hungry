@@ -186,16 +186,16 @@
 
       <!-- About Us Section -->
 
-      <section class="about" id="about">
+      <section class="about animate" id="about">
         <div class="container">
           <div class="hunger-container">
             <div class="hunger-content">
-              <h2 class="heading black">About Us</h2>
-              <h3 class="sub-heading black">
+              <h2 class="heading black fade-in">About Us</h2>
+              <h3 class="sub-heading black fade-in delay1">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at
                 velit maximus, molestie est a, tempor magna.
               </h3>
-              <p class="heading-info-dark">
+              <p class="heading-info-dark fade-in delay2">
                 Integer ullamcorper neque eu purus euismod, ac faucibus mauris
                 posuere. Morbi non ultrices ligula. Sed dictum, enim sed
                 ullamcorper feugiat, dui odio vehicula eros, a sollicitudin
@@ -204,7 +204,7 @@
               </p>
             </div>
             <div class="hunger-picture">
-              <div class="picture-container-right">
+              <div class="picture-container-right from-right slide-in delay3">
                 <img
                   loading="lazy"
                   src="./assets/images/about-img.png"
@@ -218,23 +218,23 @@
       </section>
 
       <!-- Team Section -->
-      <section class="team" id="team">
+      <section class="team animate" id="team">
         <div class="container">
           <h5 class="section-info white">Our Team</h5>
           <div class="hunger-container">
             <div class="hunger-picture">
-              <div class="picture-container-left">
+              <div class="picture-container-left from-left slide-in delay3">
                 <img loading="lazy" src="./assets/images/chef.png" alt="" />
                 <div class="yellow-frame left"></div>
               </div>
             </div>
             <div class="hunger-content">
-              <h2 class="heading white">Masterchef</h2>
-              <h3 class="sub-heading white">
+              <h2 class="heading white fade-in">Masterchef</h2>
+              <h3 class="sub-heading white fade-in delay1">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at
                 velit maximus, molestie est a, tempor magna.
               </h3>
-              <p class="heading-info-light">
+              <p class="heading-info-light fade-in delay2">
                 Integer ullamcorper neque eu purus euismod, ac faucibus mauris
                 posuere. Morbi non ultrices ligula. Sed dictum, enim sed
                 ullamcorper feugiat, dui odio vehicula eros, a sollicitudin
@@ -247,13 +247,13 @@
       </section>
 
       <!-- Booking Section -->
-      <section class="booking" id="booking">
+      <section class="booking animate" id="booking">
         <div class="container">
           <div class="hunger-container">
             <div class="hunger-content">
-              <h2 class="heading black">Book A Table</h2>
+              <h2 class="heading black fade-in">Book A Table</h2>
 
-              <form action="" class="form contact-form">
+              <form action="" class="form contact-form fade-in delay1">
                 <div class="input-group-wrap">
                   <input type="text" class="input" placeholder="Name" />
 
@@ -298,11 +298,13 @@
                     <option value="02:00">02:00 AM</option>
                   </select>
                 </div>
-                <button class="form-btn" type="submit">Book Now</button>
+                <button class="form-btn fade-in delay2" type="submit">
+                  Book Now
+                </button>
               </form>
             </div>
             <div class="hunger-picture">
-              <div class="picture-container-right">
+              <div class="picture-container-right from-right slide-in delay3">
                 <img loading="lazy" src="./assets/images/book-img.png" alt="" />
                 <div class="yellow-frame right"></div>
               </div>
@@ -402,16 +404,16 @@
       </section>
 
       <!-- Menu section -->
-      <section class="menu" id="menu">
+      <section class="menu animate" id="menu">
         <div class="container">
-          <h2 class="heading black">Delicious Menu</h2>
-          <h3 class="sub-heading black">
+          <h2 class="heading black fade-in">Delicious Menu</h2>
+          <h3 class="sub-heading black fade-in delay1">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at
             velit maximus, molestie est a, tempor magna.
           </h3>
-          <div class="menu-content" id="menu">
+          <div class="menu-content " id="menu">
             <!-- tab links -->
-            <div class="tab">
+            <div class="tab fade-in delay2">
               <button
                 class="tablinks"
                 @click="currentMenu = 'soup'"
@@ -484,7 +486,7 @@
                 </div>
               </div>
             </div>
-            <div id="pizza" class="tabcontent" v-show="currentMenu == 'pizza'">
+            <div id="pizza" class="tabcontent from-right slide-in delay3" v-show="currentMenu == 'pizza'">
               <div class="menu-item-container">
                 <div
                   class="menu-item"
@@ -492,7 +494,12 @@
                   :key="index"
                 >
                   <div class="menu-image-container">
-                    <img loading="lazy" :src="pizza.img" />
+                    <img
+                      loading="lazy"
+                      width="360"
+                      height="315"
+                      :src="pizza.img"
+                    />
                   </div>
                   <div class="item-content">
                     <p class="item-name">{{pizza.name}} . . . .</p>
@@ -1100,12 +1107,12 @@
       </section>
 
       <!-- Private Events section -->
-      <section class="events" id="events">
+      <section class="events animate" id="events">
         <div class="container">
           <h5 class="section-info white">Private Events</h5>
           <div class="hunger-container">
             <div class="hunger-picture">
-              <div class="picture-container-left">
+              <div class="picture-container-left from-left slide-in">
                 <img
                   width="475px"
                   height="475px"
@@ -1119,7 +1126,7 @@
             </div>
 
             <div class="hunger-picture">
-              <div class="picture-container-right">
+              <div class="picture-container-right from-right slide-in">
                 <img
                   width="475px"
                   height="475px"
@@ -1178,15 +1185,15 @@
       </section>
 
       <!-- contact Section -->
-      <section class="contact-us" id="contact">
+      <section class="contact-us animate" id="contact">
         <div class="container">
-          <h2 class="heading black">Contact</h2>
-          <h3 class="sub-heading black">
+          <h2 class="heading black fade-in">Contact</h2>
+          <h3 class="sub-heading black fade-in delay1">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at
             velit maximus, molestie est a, tempor magna.
           </h3>
           <div class="contact-us-form-container">
-            <form action="" class="contact-form">
+            <form action="" class="contact-form fade-in delay2">
               <div class="input-group-wrap">
                 <input type="text" class="input" placeholder="Name" />
 
@@ -1204,7 +1211,7 @@
               ></textarea>
 
               <div class="form-footer">
-                <div class="contact-info">
+                <div class="contact-info from-left slide-in delay3">
                   <div class="contact-info-item">
                     <div class="info-icon">
                       <i class="fas fa-map-marker-alt"></i>
@@ -1220,7 +1227,7 @@
                     <p>hungry@people.com</p>
                   </div>
                 </div>
-                <button class="form-btn" type="submit">Send Message</button>
+                <button class="form-btn from-right slide-in delay3" type="submit">Send Message</button>
               </div>
             </form>
           </div>

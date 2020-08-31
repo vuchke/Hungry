@@ -22,6 +22,7 @@ html {
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 1.6rem;
+  overflow-x: hidden;
 }
 
 a {
@@ -993,6 +994,50 @@ img {
 /*==================
   === Animations ===
   ==================*/
+
+  /* Fade IN */
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all .4s ease-in;
+  }
+  .appear .fade-in{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  /* slide in */
+  .from-left{
+    transform: translateX(-20%);
+  }
+  .from-right{
+    transform: translateX(20%);
+  }
+
+  .from-left,
+  .from-right{
+    transition:
+      transform 600ms ease-in,
+      opacity 500ms ease-in;
+    opacity: 0;
+  }
+  .appear .from-left,
+  .appear .from-right{
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+
+ .delay1 {
+   transition-delay: 0.2s;
+ }
+ .delay2 {
+   transition-delay: 0.4s;
+ }
+ .delay3 {
+   transition-delay: 0.8s;
+ }
 
 /* Fade in tabs */
 @-webkit-keyframes fadeEffect {
