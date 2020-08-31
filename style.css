@@ -885,7 +885,7 @@ img {
     overflow-x: hidden !important;
   }
   .hero{
-    overflow: hidden;
+    overflow: hidden !important;
   }
   .about,
   .team,
@@ -956,6 +956,9 @@ img {
   body {
     overflow-x: hidden !important;
     width: 100vw;
+  }
+  .hero{
+    overflow: hidden !important;
   }
   .container {
     padding: 0 1rem;
