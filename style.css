@@ -664,6 +664,9 @@ img {
   ===================== */
 
 @media screen and (max-width: 1076px) {
+  body {
+    overflow-x: hidden;
+  }
   .hero-title {
     font-size: 7rem;
   }
@@ -674,6 +677,9 @@ img {
 }
 
 @media screen and (max-width: 880px) {
+  body {
+    overflow-x: hidden;
+  }
   .nav {
     display: none;
   }
@@ -871,6 +877,9 @@ img {
 }
 
 @media screen and (max-width: 650px) {
+  body {
+    overflow-x: hidden;
+  }
   .about,
   .team,
   .booking,
@@ -937,6 +946,9 @@ img {
 }
 
 @media screen and (max-width: 470px) {
+  body {
+    overflow-x: hidden;
+  }
   .container {
     padding: 0 1rem;
   }
