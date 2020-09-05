@@ -1,35 +1,25 @@
 // // animations
-// const faders = document.querySelectorAll(".fade-in");
-// const sliders = document.querySelectorAll('.slide-in')
-const animates = document.querySelectorAll('.animate')
+
+const animates = document.querySelectorAll(".animate");
 const appearOptions = {
   threshold: 0,
-  rootMargin: '0px 0px -350px 0px'
-
+  rootMargin: "0px 0px -350px 0px",
 };
 
 const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
   entries.forEach((entry) => {
     if (!entry.isIntersecting) {
-      return
+      return;
     } else {
-      entry.target.classList.add('appear')
-      appearOnScroll.unobserve(entry.target)
+      entry.target.classList.add("appear");
+      appearOnScroll.unobserve(entry.target);
     }
   });
 }, appearOptions);
 
-animates.forEach(animate => {
-  appearOnScroll.observe(animate)
-})
-
-// faders.forEach(fader => {
-//   appearOnScroll.observe(fader)
-// })
-// sliders.forEach(slider => {
-//   appearOnScroll.observe(slider)
-// })
-
+animates.forEach((animate) => {
+  appearOnScroll.observe(animate);
+});
 
 // Map
 // Initialize and add the map

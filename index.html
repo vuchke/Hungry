@@ -28,7 +28,6 @@
       crossorigin="anonymous"
     />
     <!-- Import Vue 3 -->
-    <!-- <script src="https://unpkg.com/browse/vue@3.0.0-beta.24/dist/vue.global.js"></script> -->
     <script src="https://unpkg.com/vue@3.0.0-beta.24/dist/vue.global.js"></script>
     <title>Hungry Restaurant</title>
     <link rel="stylesheet" href="style.css" />
@@ -81,7 +80,7 @@
         <nav class="mobile-nav" :class="{open: mobNavOpen}">
           <div class="mob-logo">
             <a href="index.html">
-              <img src="./assets/images/logo.png" alt="" />
+              <img src="./assets/images/logo.webp" alt="" />
             </a>
           </div>
           <div class="hamburger-menu" @click="mobNavOpen = !mobNavOpen">
@@ -207,7 +206,7 @@
               <div class="picture-container-right from-right slide-in delay3">
                 <img
                   loading="lazy"
-                  src="./assets/images/about-img.png"
+                  src="./assets/images/about-img.webp"
                   alt=""
                 />
                 <div class="yellow-frame right"></div>
@@ -224,7 +223,7 @@
           <div class="hunger-container">
             <div class="hunger-picture">
               <div class="picture-container-left from-left slide-in">
-                <img loading="lazy" src="./assets/images/chef.png" alt="" />
+                <img loading="lazy" src="./assets/images/chef.webp" alt="" />
                 <div class="yellow-frame left"></div>
               </div>
             </div>
@@ -305,7 +304,11 @@
             </div>
             <div class="hunger-picture">
               <div class="picture-container-right from-right slide-in">
-                <img loading="lazy" src="./assets/images/book-img.png" alt="" />
+                <img
+                  loading="lazy"
+                  src="./assets/images/book-img.webp"
+                  alt=""
+                />
                 <div class="yellow-frame right"></div>
               </div>
             </div>
@@ -328,7 +331,7 @@
                 <div class="picture-container-left">
                   <img
                     loading="lazy"
-                    src="./assets/images/pancakes.png"
+                    src="./assets/images/pancakes.webp"
                     alt=""
                   />
                   <div class="yellow-frame left"></div>
@@ -355,7 +358,7 @@
                 <div class="picture-container-left">
                   <img
                     loading="lazy"
-                    src="./assets/images/tres-leches.jpg"
+                    src="./assets/images/tres-leches.webp"
                     alt=""
                   />
                   <div class="yellow-frame left"></div>
@@ -380,7 +383,7 @@
             <div class="hunger-container">
               <div class="hunger-picture">
                 <div class="picture-container-left">
-                  <img loading="lazy" src="./assets/images/sushi.jpg" alt="" />
+                  <img loading="lazy" src="./assets/images/sushi.webp" alt="" />
                   <div class="yellow-frame left"></div>
                 </div>
               </div>
@@ -411,7 +414,7 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at
             velit maximus, molestie est a, tempor magna.
           </h3>
-          <div class="menu-content " id="menu">
+          <div class="menu-content" id="menu">
             <!-- tab links -->
             <div class="tab fade-in delay2">
               <button
@@ -486,7 +489,11 @@
                 </div>
               </div>
             </div>
-            <div id="pizza" class="tabcontent from-right slide-in delay3" v-show="currentMenu == 'pizza'">
+            <div
+              id="pizza"
+              class="tabcontent from-right slide-in delay3"
+              v-show="currentMenu == 'pizza'"
+            >
               <div class="menu-item-container">
                 <div
                   class="menu-item"
@@ -535,462 +542,57 @@
               v-show="currentMenu == 'desert'"
             >
               <div class="menu-item-container">
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
+                <div
+                  class="menu-item"
+                  v-for="(desert, index) in deserts"
+                  :key="index"
+                >
+                  <div class="menu-image-container">
+                    <img loading="lazy" :src="desert.img" />
                   </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
                   <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
+                    <p class="item-name">{{desert.name}} . . . .</p>
+                    <span> {{desert.price}}&euro;</span>
                   </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
+                  <p class="item-description">{{desert.description}}</p>
                 </div>
               </div>
             </div>
 
             <div id="wine" class="tabcontent" v-show="currentMenu == 'wine'">
               <div class="menu-item-container">
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
+                <div
+                  class="menu-item"
+                  v-for="(wine, index) in wines"
+                  :key="index"
+                >
+                  <div class="menu-image-container">
+                    <img loading="lazy" :src="wine.img" />
                   </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
                   <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
+                    <p class="item-name">{{wine.name}} . . . .</p>
+                    <span> {{wine.price}}&euro;</span>
                   </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
+                  <p class="item-description">{{wine.description}}</p>
                 </div>
               </div>
             </div>
 
             <div id="beer" class="tabcontent" v-show="currentMenu == 'beer'">
               <div class="menu-item-container">
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
+                <div
+                  class="menu-item"
+                  v-for="(beer, index) in beers"
+                  :key="index"
+                >
+                  <div class="menu-image-container">
+                    <img loading="lazy" :src="beer.img" />
                   </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
                   <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
+                    <p class="item-name">{{beer.name}} . . . .</p>
+                    <span> {{beer.price}}&euro;</span>
                   </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
+                  <p class="item-description">{{beer.description}}</p>
                 </div>
               </div>
             </div>
@@ -1001,104 +603,19 @@
               v-show="currentMenu == 'drinks'"
             >
               <div class="menu-item-container">
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
+                <div
+                  class="menu-item"
+                  v-for="(drink, index) in drinks"
+                  :key="index"
+                >
+                  <div class="menu-image-container">
+                    <img loading="lazy" :src="drink.img" />
                   </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
                   <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
+                    <p class="item-name">{{drink.name}} . . . .</p>
+                    <span> {{drink.price}}&euro;</span>
                   </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
-                </div>
-
-                <div class="menu-item">
-                  <div class="item-content">
-                    <p class="item-name">Bucatini all'Amatriciana . . . .</p>
-                    <span> 66,68 USD</span>
-                  </div>
-                  <p class="item-description">
-                    Integer ullamcorper neque eu purus euismod
-                  </p>
+                  <p class="item-description">{{drink.description}}</p>
                 </div>
               </div>
             </div>
@@ -1117,7 +634,7 @@
                   width="475px"
                   height="475px"
                   loading="lazy"
-                  src="./assets/images/wedding.png"
+                  src="./assets/images/wedding.webp"
                   alt=""
                 />
                 <div class="yellow-frame left"></div>
@@ -1131,7 +648,7 @@
                   width="475px"
                   height="475px"
                   loading="lazy"
-                  src="./assets/images/Corporate.png"
+                  src="./assets/images/Corporate.webp"
                   alt=""
                 />
                 <div class="yellow-frame right"></div>
@@ -1150,36 +667,36 @@
       <!-- Gallery Section -->
       <section class="gallery" id="gallery">
         <div class="gallery-slider">
-          <a href="./assets/images/gallery1.png" target="_blank">
-            <img data-lazy="./assets/images/gallery1.png" alt="" />
+          <a href="./assets/images/gallery1.webp" target="_blank">
+            <img data-lazy="./assets/images/gallery1.webp" alt="" />
           </a>
 
-          <a href="./assets/images/gallery2.png" target="_blank">
-            <img data-lazy="./assets/images/gallery2.png" alt="" />
+          <a href="./assets/images/gallery2.webp" target="_blank">
+            <img data-lazy="./assets/images/gallery2.webp" alt="" />
           </a>
 
-          <a href="./assets/images/gallery3.png" target="_blank">
-            <img data-lazy="./assets/images/gallery3.png" alt="" />
+          <a href="./assets/images/gallery3.webp" target="_blank">
+            <img data-lazy="./assets/images/gallery3.webp" alt="" />
           </a>
 
-          <a href="./assets/images/gallery4.png" target="_blank">
-            <img data-lazy="./assets/images/gallery4.png" alt="" />
+          <a href="./assets/images/gallery4.webp" target="_blank">
+            <img data-lazy="./assets/images/gallery4.webp" alt="" />
           </a>
 
-          <a href="./assets/images/gallery5.jpg" target="_blank">
-            <img data-lazy="./assets/images/thumb-gallery5.jpg" alt="" />
+          <a href="./assets/images/gallery5.webp" target="_blank">
+            <img data-lazy="./assets/images/thumb-gallery5.webp" alt="" />
           </a>
 
-          <a href="./assets/images/gallery6.jpg" target="_blank">
-            <img data-lazy="./assets/images/thumb-gallery6.jpg" alt="" />
+          <a href="./assets/images/gallery6.webp" target="_blank">
+            <img data-lazy="./assets/images/thumb-gallery6.webp" alt="" />
           </a>
 
-          <a href="./assets/images/gallery7.jpg" target="_blank">
-            <img data-lazy="./assets/images/thumb-gallery7.jpg" alt="" />
+          <a href="./assets/images/gallery7.webp" target="_blank">
+            <img data-lazy="./assets/images/thumb-gallery7.webp" alt="" />
           </a>
 
-          <a href="./assets/images/gallery8.jpg" target="_blank">
-            <img data-lazy="./assets/images/thumb-gallery8.jpg" alt="" />
+          <a href="./assets/images/gallery8.webp" target="_blank">
+            <img data-lazy="./assets/images/thumb-gallery8.webp" alt="" />
           </a>
         </div>
       </section>
@@ -1227,7 +744,12 @@
                     <p>hungry@people.com</p>
                   </div>
                 </div>
-                <button class="form-btn from-right slide-in delay3" type="submit">Send Message</button>
+                <button
+                  class="form-btn from-right slide-in delay3"
+                  type="submit"
+                >
+                  Send Message
+                </button>
               </div>
             </form>
           </div>

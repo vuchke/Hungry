@@ -199,7 +199,7 @@ img {
 .hero {
   width: 100%;
   height: 800px;
-  background: url("./assets/images/header-bg.png") center no-repeat;
+  background: url("./assets/images/header-bg.webp") center no-repeat;
   background-size: cover;
   position: relative;
   padding-top: 100px;
@@ -350,7 +350,7 @@ img {
 }
 
 .team {
-  background: url("./assets/images/team-bg.png") center no-repeat;
+  background: url("./assets/images/team-bg.webp") center no-repeat;
   background-size: cover;
   padding: 50px 0 100px;
 }
@@ -382,7 +382,6 @@ img {
   color: rgba(51, 51, 51, 0.5);
 }
 
-
 .hours {
   text-align: center;
   padding: 5rem 0;
@@ -409,7 +408,7 @@ img {
 
 /*Specialties Section */
 .specialties {
-  background: url("./assets/images/specialties-bg.png") center no-repeat;
+  background: url("./assets/images/specialties-bg.webp") center no-repeat;
   background-size: cover;
   padding-bottom: 50px;
 }
@@ -514,12 +513,11 @@ img {
 .item-description {
   font-size: 1.2rem;
   color: rgba(51, 51, 51, 0.5);
-  
 }
 
 /* Private Event Section */
 .events {
-  background: url("./assets/images/specialties-bg.png") center no-repeat;
+  background: url("./assets/images/specialties-bg.webp") center no-repeat;
   background-size: cover;
   overflow-x: hidden;
 }
@@ -723,7 +721,8 @@ img {
   }
 
   .hamburger-menu:hover {
-    box-shadow: inset 0.5rem 0.5rem 1rem #cacaca, inset -0.5rem -0.5rem 1rem #fff;
+    box-shadow: inset 0.5rem 0.5rem 1rem #cacaca,
+      inset -0.5rem -0.5rem 1rem #fff;
   }
   .bar {
     width: 3rem;
@@ -731,46 +730,45 @@ img {
     background-color: #333;
     display: inline-block;
     position: relative;
-    transition: all 0.5s;    
+    transition: all 0.5s;
   }
   .bar::before,
   .bar::after {
-    content: '';
+    content: "";
     position: absolute;
     width: inherit;
     height: inherit;
     background-color: #333;
-    transition: all 0.5s; 
+    transition: all 0.5s;
   }
-  .bar::before{
-    top: -.8rem;
+  .bar::before {
+    top: -0.8rem;
   }
   .bar::after {
-    top: .8rem;
+    top: 0.8rem;
   }
   .open .hamburger-menu {
     transform: rotate(90deg);
-    
   }
-  .open .bar{
-    background-color: transparent;    
+  .open .bar {
+    background-color: transparent;
   }
   .open .bar::before {
     top: 0;
     transform: rotate(135deg);
     background-color: var(--yellow-solid);
   }
-  
+
   .open .bar::after {
     top: 0;
     transform: rotate(-135deg);
     background-color: var(--yellow-solid);
   }
-  .mob-nav-list{
+  .mob-nav-list {
     width: 50rem;
     height: 100vh;
     position: fixed;
-    
+
     top: 0;
     right: 0;
     background-color: #eee;
@@ -778,26 +776,26 @@ img {
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
-    box-shadow: -.5rem 0 1rem rgba(0, 0, 0, 0.2);
+    box-shadow: -0.5rem 0 1rem rgba(0, 0, 0, 0.2);
     z-index: 1500;
     transform: translateX(55rem);
     transition: all 0.5s ease;
   }
-  .open .mob-nav-list{
+  .open .mob-nav-list {
     transform: translateX(0);
   }
-  .mob-nav-item {    
+  .mob-nav-item {
     border-bottom: 2px solid var(--yellow-solid);
   }
 
-  .mob-nav-link{
+  .mob-nav-link {
     text-decoration: none;
     display: block;
     color: #333;
     font-size: 1.6rem;
     text-transform: uppercase;
-    padding: .5rem;
-    transition: all .5s;
+    padding: 0.5rem;
+    transition: all 0.5s;
   }
   .mob-nav-link:hover {
     color: var(--yellow-solid);
@@ -885,7 +883,7 @@ img {
     width: 100vw;
     overflow-x: hidden !important;
   }
-  .hero{
+  .hero {
     overflow: hidden !important;
   }
   .about,
@@ -958,7 +956,7 @@ img {
     overflow-x: hidden !important;
     width: 100vw;
   }
-  .hero{
+  .hero {
     overflow: hidden !important;
   }
   .container {
@@ -1005,7 +1003,7 @@ img {
   .menu-item {
     width: 100%;
   }
-  
+
   .contact-info {
     flex-wrap: wrap;
   }
@@ -1019,49 +1017,46 @@ img {
   === Animations ===
   ==================*/
 
-  /* Fade IN */
+/* Fade IN */
 
-  .fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all .4s ease-in;
-  }
-  .appear .fade-in{
-    opacity: 1;
-    transform: translateY(0px);
-  }
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease-in;
+}
+.appear .fade-in {
+  opacity: 1;
+  transform: translateY(0px);
+}
 
-  /* slide in */
-  .from-left{
-    transform: translateX(-20%);
-  }
-  .from-right{
-    transform: translateX(20%);
-  }
+/* slide in */
+.from-left {
+  transform: translateX(-20%);
+}
+.from-right {
+  transform: translateX(20%);
+}
 
-  .from-left,
-  .from-right{
-    transition:
-      transform 600ms ease-in,
-      opacity 500ms ease-in;
-    opacity: 0;
-  }
-  .appear .from-left,
-  .appear .from-right{
-    transform: translateX(0);
-    opacity: 1;
-  }
+.from-left,
+.from-right {
+  transition: transform 600ms ease-in, opacity 500ms ease-in;
+  opacity: 0;
+}
+.appear .from-left,
+.appear .from-right {
+  transform: translateX(0);
+  opacity: 1;
+}
 
-
- .delay1 {
-   transition-delay: 0.2s;
- }
- .delay2 {
-   transition-delay: 0.4s;
- }
- .delay3 {
-   transition-delay: 0.8s;
- }
+.delay1 {
+  transition-delay: 0.2s;
+}
+.delay2 {
+  transition-delay: 0.4s;
+}
+.delay3 {
+  transition-delay: 0.8s;
+}
 
 /* Fade in tabs */
 @-webkit-keyframes fadeEffect {
