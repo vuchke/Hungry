@@ -30,6 +30,12 @@
     <!-- Import Vue 3 -->
     <script src="https://unpkg.com/vue@3.0.0-beta.24/dist/vue.global.js"></script>
     <title>Hungry Restaurant</title>
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon.png"
+      type="image/png"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -206,6 +212,8 @@
               <div class="picture-container-right from-right slide-in delay3">
                 <img
                   loading="lazy"
+                  width="350"
+                  height="350"
                   src="./assets/images/about-img.webp"
                   alt=""
                 />
@@ -223,7 +231,13 @@
           <div class="hunger-container">
             <div class="hunger-picture">
               <div class="picture-container-left from-left slide-in">
-                <img loading="lazy" src="./assets/images/chef.webp" alt="" />
+                <img
+                  loading="lazy"
+                  width="350"
+                  height="350"
+                  src="./assets/images/chef.webp"
+                  alt=""
+                />
                 <div class="yellow-frame left"></div>
               </div>
             </div>
@@ -306,6 +320,8 @@
               <div class="picture-container-right from-right slide-in">
                 <img
                   loading="lazy"
+                  width="350"
+                  height="350"
                   src="./assets/images/book-img.webp"
                   alt=""
                 />
@@ -331,6 +347,8 @@
                 <div class="picture-container-left">
                   <img
                     loading="lazy"
+                    width="350"
+                    height="350"
                     src="./assets/images/pancakes.webp"
                     alt=""
                   />
@@ -358,6 +376,8 @@
                 <div class="picture-container-left">
                   <img
                     loading="lazy"
+                    width="350"
+                    height="350"
                     src="./assets/images/tres-leches.webp"
                     alt=""
                   />
@@ -383,7 +403,13 @@
             <div class="hunger-container">
               <div class="hunger-picture">
                 <div class="picture-container-left">
-                  <img loading="lazy" src="./assets/images/sushi.webp" alt="" />
+                  <img
+                    loading="lazy"
+                    width="350"
+                    height="350"
+                    src="./assets/images/sushi.webp"
+                    alt=""
+                  />
                   <div class="yellow-frame left"></div>
                 </div>
               </div>
@@ -479,7 +505,12 @@
                   :key="index"
                 >
                   <div class="menu-image-container">
-                    <img loading="lazy" :src="soup.img" />
+                    <img
+                      loading="lazy"
+                      width="331"
+                      height="248"
+                      :src="soup.img"
+                    />
                   </div>
                   <div class="item-content">
                     <p class="item-name">{{soup.name}} . . . .</p>
@@ -525,7 +556,12 @@
                   :key="index"
                 >
                   <div class="menu-image-container">
-                    <img loading="lazy" :src="pasta.img" />
+                    <img
+                      loading="lazy"
+                      width="350"
+                      height="350"
+                      :src="pasta.img"
+                    />
                   </div>
                   <div class="item-content">
                     <p class="item-name">{{pasta.name}} . . . .</p>
@@ -548,7 +584,12 @@
                   :key="index"
                 >
                   <div class="menu-image-container">
-                    <img loading="lazy" :src="desert.img" />
+                    <img
+                      loading="lazy"
+                      width="350"
+                      height="350"
+                      :src="desert.img"
+                    />
                   </div>
                   <div class="item-content">
                     <p class="item-name">{{desert.name}} . . . .</p>
@@ -567,7 +608,12 @@
                   :key="index"
                 >
                   <div class="menu-image-container">
-                    <img loading="lazy" :src="wine.img" />
+                    <img
+                      loading="lazy"
+                      width="350"
+                      height="350"
+                      :src="wine.img"
+                    />
                   </div>
                   <div class="item-content">
                     <p class="item-name">{{wine.name}} . . . .</p>
@@ -586,7 +632,12 @@
                   :key="index"
                 >
                   <div class="menu-image-container">
-                    <img loading="lazy" :src="beer.img" />
+                    <img
+                      loading="lazy"
+                      width="350"
+                      height="350"
+                      :src="beer.img"
+                    />
                   </div>
                   <div class="item-content">
                     <p class="item-name">{{beer.name}} . . . .</p>
@@ -609,7 +660,12 @@
                   :key="index"
                 >
                   <div class="menu-image-container">
-                    <img loading="lazy" :src="drink.img" />
+                    <img
+                      loading="lazy"
+                      width="350"
+                      height="350"
+                      :src="drink.img"
+                    />
                   </div>
                   <div class="item-content">
                     <p class="item-name">{{drink.name}} . . . .</p>
